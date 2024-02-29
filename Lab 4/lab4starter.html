@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 4</title>
+        <script>
+
+            window.onload = function(){
+
+            //NAVIGATION BAR
+            let navBar = document.createElement('nav'); 
+            navBar.className = "nav"; 
+            navBar.innerHTML = 'My Website'; 
+
+            navBar.style.width = '100vw'; 
+            navBar.style.background = '#6155B4'; 
+            navBar.style.height = '40px'; 
+            navBar.style.fontSize = '20px'; 
+            navBar.style.color = 'white'; 
+            
+            document.body.insertBefore(navBar, document.body.firstChild); 
+
+            //PADDING TO MAIN
+            let mainTag = document.querySelector('main'); 
+            mainTag.style.padding = '20px';
+
+            //RADIO BUTTON
+            let radioLabels = document.querySelectorAll('.age-label');
+            radioLabels[1].textContent = '18-60';
+            radioLabels[2].textContent = 'more than 60';
+
+            //SEARCH BAR
+            let searchBar = document.getElementById('search');
+            searchBar.style.width = '200px';
+            searchBar.style.height = '25px';
+            searchBar.style.borderRadius = '25px';
+            searchBar.style.padding = '10px';
+            searchBar.style.border = '0.5px solid lightgrey';
+
+            //VIEW VISITOR
+            let viewVisitor = document.getElementById('view-visitor-submit-btn'); 
+            viewVisitor.style.background = '#FDCE4B';
+            viewVisitor.style.color = '#61554B';
+            viewVisitor.style.fontWeight = 'bold';
+            viewVisitor.style.border = 'none';
+            viewVisitor.style.padding = '8px 10px';
+
+            }; 
+      
+        </script>
+    </head>
+    <body>
+        <main>
+            <form name="search">
+                <label id="search-label" for="search">Search the site: </label>
+                <input type="text" name="search" id="search" />
+            </form>
+    
+            <hr>
+    
+            <form name="view-person">
+                View the visitors:
+                <table id="age-table">
+                    <tbody>
+                        <tr>
+                            <td>Age:</td>
+                            <td id="age-list">
+                                <input type="radio" name="age" id="young" value="young">
+                                <label for="young" class="age-label">less than 18</label>
+                            
+                                <input type="radio" name="age" id="mature" value="mature">
+                                <label for="mature" class="age-label">18-50</label>
+                            
+                                <input type="radio" name="age" id="senior" value="senior">
+                                <label for="senior" class="age-label">more than 50</label>
+                            </td>
+                        </tr>            
+                    </tbody>
+                </table>
+            
+                <input id="view-visitor-submit-btn" type="submit" value="View Visitors">
+            </form>
+        </main>
+    </body>
+</html>
