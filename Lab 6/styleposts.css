@@ -1,0 +1,58 @@
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8e3e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.comment {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 1000px;
+  margin: 10px;
+  padding: 30px;
+}
+
+.comment-avatar {
+  font-size: 24px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  color: #1dac8667; 
+}
+
+.comment-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comment-email {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.comment-body {
+  font-size: 14px;
+  color: #555;
+}
+
+.comment:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+  
