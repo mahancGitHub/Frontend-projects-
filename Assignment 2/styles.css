@@ -1,0 +1,263 @@
+
+*{
+    font-family: 'Roboto';
+    font-size: 14px; 
+    
+}
+
+
+.container{
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'left-nav main-nav main-nav';
+    grid-template-columns: 300px auto; 
+    grid-template-rows: 1fr 30fr;  
+
+}
+
+/* Throughout the stylesheet, I have explicitly mentioned the parts of the HTML that are being styled (header, nav, main) 
+   in the style-box headings. Although this is not necessary, it provides structure and makes the code easier to read. */
+
+
+/*Header*/
+header{
+    height: 3.5rem;  
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: #dc4c3e;
+    color: #ffffff; 
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    
+}
+
+
+header #menuIcon{ 
+    padding-top: 0.1rem;
+    padding-left: 3rem;
+
+}
+
+
+header .search{
+    display: flex;
+    align-items: center;
+    background-color: #f36e62;
+    height: 2rem;
+    margin: 0.9rem;
+    width: 16rem;
+    border-radius: 0.3rem; 
+   
+}
+
+
+header #search-icon{
+    padding-left: 0.5rem;
+    padding-right: 0.2rem;
+
+}
+
+
+
+header #searchDisplay{
+    background-color: #f36e62;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 0; 
+  
+}
+
+header #searchDisplay::placeholder{
+    color: #ffffff;
+}
+
+
+
+header .check{
+    display: flex;
+    align-items: center;
+    margin-left: auto;  
+}
+
+header #checkIcon{
+    margin-right: 0.5rem;   
+}
+
+
+
+/*Left Navigation*/
+
+nav{
+    grid-area: left-nav;
+    background-color:  #fefbf2;
+    color: #000000;   
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-left: 0.5rem;
+    padding-top: 0.7rem;
+  
+}
+
+
+nav ul li{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    margin-right: 0.357rem; 
+}
+
+nav span{
+    font-size: 12px;
+    color: #7e7d79;
+    padding-left: 0.357rem;
+}
+
+
+/*Main Navigation*/
+
+main{
+    grid-area: main-nav;
+    display: flex;
+    flex-direction: column;  
+    margin-top: 2rem; 
+    margin-left: 2rem;
+}
+
+main h1{
+    font-size: 20px;
+    margin-left: 0.8rem;
+}
+
+main hr{
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 0;
+}
+
+
+main ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main ul li {
+    padding: 0.6rem;
+    color: #242424;
+
+}
+
+main ul li input {
+    margin-right: 9px;
+    width: 1.7em;
+    height: 1.7em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 0.13rem solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+
+}
+  
+main ul li input:checked {
+    background-color: #c6cdc5;
+
+}
+
+
+/*Fix*/
+@media(max-width: 480px) {
+    nav {
+        display: none;
+    }
+}
+
+
+
+#displayInput{
+    border: none;
+    outline: none;
+
+}
+
+#displayInput::placeholder{
+    color: #7e7d79
+
+}
+
+#add-task-input{
+    border: none;
+    outline: none;
+    color: #242424;
+    width: 100%;
+}
+
+#add-task-box{
+    border: 1px solid rgba(126, 126, 126, 0.314);
+    border-radius: 10px;
+  
+    width: 1000px;
+    height: 60px;
+    
+    padding: 20px;
+
+}
+
+#button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 10px;  /* Add spacing as needed */
+    margin-bottom: 0;
+}
+
+/* Adjust the button styles as needed */
+#cancel-button, #add-task-button {
+    margin-left: 10px; /* Add spacing between buttons */
+    height: 36px;
+    width: 95px; /* Adjust the width to make the buttons longer */
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+#add-task-button{   
+    color: #fcfcfc;
+    background-color: #fd9a91;
+}
+
+#cancel-button{
+    background-color: rgb(242, 242, 242);
+}
+
+#add-task-icon{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#task-list li span[contentEditable="true"] {
+    outline: none;
+    width: 100%;
+}
+ 
+ 
+
+

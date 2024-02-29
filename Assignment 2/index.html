@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>TaskManager</title>
+
+<!-- Tir: Main nav: add tasks, local storage-->
+<!-- Ons: Header -->
+<!-- Tor: Left nav  -->
+<!-- Fre: Remaining -->
+<!-- Søn: Remaining-->
+<!-- Man: Remaining -->
+<!-- Tir: Last touches -->
+
+
+<!-- Fix styling -->
+
+<!-- Look over assigment -->
+
+<!-- refine code -->
+
+
+
+   
+
+</head>
+ 
+<body>
+
+  <div class="container">
+
+    <!--Header-->
+    <header>
+      <img id= "menuIcon" src="./assets/menu_icon.png" alt="menuIcon"/>  
+      
+      <div class ="search">
+        <img
+            id="search-icon"
+            src="./assets/search_icon.png"
+            alt="search icon"
+          />
+        <input id="searchDisplay" type="text" placeholder="Quick Find">  
+      </div>
+
+      <div class ="check">
+        <img id="checkIcon" src="./assets/check_icon.png" alt="checkIcon"/>
+        <p id="totalTasksCount"></p> / <p id="uncompletedTasksCount"></p>
+      </div>
+
+    </header>
+
+
+    <!--Left Navigation-->
+    <nav style>   
+      <ul>
+        <li>
+          <img id="inbox" src="./assets/inbox_icon.png" alt=inboxIcon/> Inbox <span id = "in"></span>  
+        </li>
+        <li>
+          <img id="today" src="./assets/calendar_icon.png" alt=calenderIcon/>Today <span>5</span> 
+        </li>
+        <li>
+          <img id="upcoming" src="./assets/upcoming_icon.png" alt=upcomingIcon/>Upcoming
+        </li>
+      </ul>
+    </nav>
+
+
+    <!--Main Navigation-->
+    <main>
+      <h1>Inbox</h1> 
+      <ul id="task-list">
+    </ul>
+      <div id="add-task-container">
+        <div id="add-task-display"style="display:block" >
+        <img id= "add-task-icon" src="./assets/add_task_icon.png" alt="add-task-symbol"/>  
+        <input id="displayInput" type="text" placeholder="Add Task" readonly="readonly"/>  
+      </div>
+        <div id="add-task-box" style="display: none;">
+          <input type="text" placeholder="Task name" id="add-task-input"/>  
+          <hr/>
+          <div id="button-container">
+            <button id="cancel-button">Cancel</button>
+            <button id="add-task-button">Add Task</button>
+        </div>
+        </div>
+    </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
