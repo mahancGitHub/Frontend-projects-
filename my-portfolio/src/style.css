@@ -1,0 +1,14 @@
+/* Include Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+ul {
+    list-style: none;
+}
+
+li{
+    margin: 20px;
+}
+    
