@@ -5,7 +5,16 @@ import './style.css';
 const App = () => {
   const [currentSum, setCurrentSum] = useState(0);
 
+  // Replaced API with local random number due to access/CORS issues
+
   const getRandomNumber = async () => {
+    const randomNum = Math.floor(Math.random() * 11); // 0 to 10
+    console.log(randomNum); // Optional: see the number in console
+    return randomNum;
+  };
+  
+    // API 
+  /*const getRandomNumber = async () => {
     try {
       const response = await axios.get('http://www.randomnumberapi.com/api/v1.0/random?min=0&max=10');
       
@@ -17,7 +26,7 @@ const App = () => {
       console.error('Error fetching random number:', error);
       return NaN;
     }
-  };
+  }*/
   
 
   const handleAddNumber = async () => {
